@@ -5,7 +5,8 @@ extends Node2D
 
 
 func on_click():
-	get_tree().change_scene_to_file("res://scenes/Level_2.tscn")
+
+	get_tree().change_scene_to_file("res://scenes/Level_3.tscn")
 	
 
 
