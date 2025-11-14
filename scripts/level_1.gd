@@ -1,11 +1,11 @@
 extends Node2D
 
 
-@onready var button: Button = get_node_or_null("ColorRect/Button")
+@onready var button: Button = get_node_or_null("BackGround/Button")
 
 
 func on_click():
-	get_tree().change_scene_to_file("res://scenes/Level_2.tscn")
+	get_tree().change_scene_to_file("res://scenes/level_2.tscn")
 	
 
 

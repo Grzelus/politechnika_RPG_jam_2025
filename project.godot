@@ -13,7 +13,6 @@ config_version=5
 config/name="politechnika_RPG_jam_2025"
 run/main_scene="uid://qc2epkdkahky"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://assets/icon.svg"
 
 [display]
 
