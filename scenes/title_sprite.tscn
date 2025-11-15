@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0amdlomxy0x7"]
+
+[ext_resource type="Texture2D" uid="uid://drnf432a86lbu" path="res://assets/title.png" id="1_jysab"]
+
+[node name="Title" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jysab")
+centered = false

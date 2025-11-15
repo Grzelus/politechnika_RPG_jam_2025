@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dft74mgrd42k0"]
+
+[ext_resource type="Texture2D" uid="uid://o1i6inran1m1" path="res://assets/quit.png" id="1_8r2k3"]
+
+[node name="Quit" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_8r2k3")
+flat = true

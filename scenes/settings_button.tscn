@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://deksrjh0bh8bl"]
+
+[ext_resource type="Texture2D" uid="uid://dvk8g345silau" path="res://assets/settings.png" id="1_jxe1r"]
+
+[node name="Settings" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_jxe1r")
+flat = true

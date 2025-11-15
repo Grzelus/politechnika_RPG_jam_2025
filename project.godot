@@ -10,8 +10,7 @@ config_version=5
 
 [application]
 
-config/name="politechnika_RPG_jam_2025"
-run/main_scene="uid://qc2epkdkahky"
+config/name="Title Screen"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [display]
