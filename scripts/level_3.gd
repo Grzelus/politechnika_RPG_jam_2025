@@ -9,8 +9,7 @@ func play_clicked() -> void:
 	
 func settings_clicked() -> void:
 	var settings_scene = preload("res://scenes/settings.tscn").instantiate()
-	add_child(settings_scene)
-		
+	add_child(settings_scene)	
 func quit_clicked() -> void:
 	get_tree().quit()
 	

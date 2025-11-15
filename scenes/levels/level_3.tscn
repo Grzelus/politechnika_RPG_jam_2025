@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://c8ukoiu64mkgh"]
+
+[ext_resource type="Script" uid="uid://dw53bdn7t1kc7" path="res://scripts/level_3.gd" id="1_fmg3e"]
+[ext_resource type="PackedScene" uid="uid://41n0gpbbbtde" path="res://scenes/background.tscn" id="2_ftfob"]
+[ext_resource type="PackedScene" uid="uid://36po3lou07ye" path="res://scenes/menu.tscn" id="3_fkk1g"]
+[ext_resource type="PackedScene" uid="uid://b0amdlomxy0x7" path="res://scenes/title_sprite.tscn" id="4_ugcn1"]
+[ext_resource type="FontFile" uid="uid://2d5xopy54fx8" path="res://assets/atop.ttf" id="5_pimnq"]
+
+[node name="Level_3" type="Node2D"]
+script = ExtResource("1_fmg3e")
+
+[node name="Background" parent="." instance=ExtResource("2_ftfob")]
+
+[node name="Menu" parent="." instance=ExtResource("3_fkk1g")]
+offset_left = 960.0
+offset_top = 670.0
+offset_right = 960.0
+offset_bottom = 670.0
+
+[node name="Title" parent="." instance=ExtResource("4_ugcn1")]
+position = Vector2(410, 185)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 242.0
+offset_top = 524.0
+offset_right = 332.0
+offset_bottom = 774.0
+theme_override_fonts/font = ExtResource("5_pimnq")
+theme_override_font_sizes/font_size = 200
+text = "3"
