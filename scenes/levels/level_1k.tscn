@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2sc6mfvnqvcw"]
+[gd_scene load_steps=4 format=3 uid="uid://b0yui6qrjp5dj"]
 
-[ext_resource type="Script" uid="uid://ba34kh80xs8gu" path="res://scripts/level_1k.gd" id="1_lapuo"]
+[ext_resource type="Script" path="res://scripts/level_1k.gd" id="1_lapuo"]
 [ext_resource type="PackedScene" uid="uid://41n0gpbbbtde" path="res://scenes/background.tscn" id="2_d3x2b"]
-[ext_resource type="PackedScene" uid="uid://b0amdlomxy0x7" path="res://scenes/title_sprite.tscn" id="4_oahc2"]
+[ext_resource type="PackedScene" path="res://scenes/title_sprite.tscn" id="4_oahc2"]
 
 [node name="Level_1k" type="Node2D"]
 script = ExtResource("1_lapuo")
@@ -10,4 +10,4 @@ script = ExtResource("1_lapuo")
 [node name="Background" parent="." instance=ExtResource("2_d3x2b")]
 
 [node name="Title" parent="." instance=ExtResource("4_oahc2")]
-position = Vector2(410, 185)
+position = Vector2(410, 155)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blchdfugk2fyl"
-path="res://.godot/imported/card6.png-b9f9016d31f1d3dd96fbbd8a20f9c329.ctex"
+uid="uid://bucari8b0eglp"
+path="res://.godot/imported/magic_ball.png-9a2f6279c29516593e6c506d67223205.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card6.png"
-dest_files=["res://.godot/imported/card6.png-b9f9016d31f1d3dd96fbbd8a20f9c329.ctex"]
+source_file="res://assets/magic_ball.png"
+dest_files=["res://.godot/imported/magic_ball.png-9a2f6279c29516593e6c506d67223205.ctex"]
 
 [params]
 
