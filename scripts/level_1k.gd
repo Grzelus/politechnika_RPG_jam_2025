@@ -15,6 +15,4 @@ func quit_clicked() -> void:
 	get_tree().quit()
 	
 func _ready() -> void:
-	play.connect("pressed", Callable(self, "play_clicked"))
-	settings.connect("pressed", Callable(self, "settings_clicked"))
-	quit.connect("pressed", Callable(self, "quit_clicked"))
+	pass

@@ -1,70 +1,58 @@
-[gd_scene load_steps=5 format=3 uid="uid://1ay04rv1m6u5"]
+[gd_scene load_steps=9 format=3 uid="uid://1ay04rv1m6u5"]
 
 [ext_resource type="PackedScene" uid="uid://b488s4oa6vq3p" path="res://scenes/dragable_item.tscn" id="1_5odqg"]
 [ext_resource type="Script" uid="uid://ds0bc44r2dneg" path="res://scripts/snapping_layer.gd" id="1_rgxwr"]
-[ext_resource type="Texture2D" uid="uid://b3tscr25alg06" path="res://assets/card9.png" id="3_52b3f"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rgxwr"]
-size = Vector2(361, 256)
+[ext_resource type="PackedScene" uid="uid://dvfnwui8te5vo" path="res://scenes/kacper scenes/snap_anchor.tscn" id="2_txs7d"]
+[ext_resource type="Texture2D" uid="uid://dufrknj0fivoj" path="res://assets/card7.png" id="3_52b3f"]
+[ext_resource type="Texture2D" uid="uid://blchdfugk2fyl" path="res://assets/card6.png" id="4_txs7d"]
+[ext_resource type="Texture2D" uid="uid://b3tscr25alg06" path="res://assets/card9.png" id="5_qlc6l"]
+[ext_resource type="Texture2D" uid="uid://duhm82kotglvv" path="res://assets/card8.png" id="6_34t3u"]
+[ext_resource type="Texture2D" uid="uid://cdr3gsso441jj" path="res://assets/card10.png" id="7_qrcr7"]
 
 [node name="order" type="Node2D"]
 script = ExtResource("1_rgxwr")
 
 [node name="Dragable Item" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(215, 916)
-
-[node name="Sprite2D" type="Sprite2D" parent="Dragable Item"]
-position = Vector2(-3.9999971, -11.999975)
-scale = Vector2(0.396, 0.34761906)
-texture = ExtResource("3_52b3f")
+position = Vector2(233, 841)
+texture = ExtResource("4_txs7d")
+card_id = "6"
 
 [node name="Dragable Item2" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(632, 901)
-
-[node name="Sprite2D" type="Sprite2D" parent="Dragable Item2"]
+position = Vector2(552, 849)
+texture = ExtResource("3_52b3f")
+card_id = "7"
 
 [node name="Dragable Item3" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(1044, 872)
-
-[node name="Sprite2D" type="Sprite2D" parent="Dragable Item3"]
+position = Vector2(937, 808)
+texture = ExtResource("6_34t3u")
+card_id = "8"
 
 [node name="Dragable Item4" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(1456, 901)
+position = Vector2(1307, 808)
+texture = ExtResource("5_qlc6l")
+card_id = "9"
 
 [node name="Dragable Item5" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(1780, 893)
+position = Vector2(1670, 813)
+texture = ExtResource("7_qrcr7")
+card_id = "10"
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(938, 366)
+[node name="Area2D" parent="." instance=ExtResource("2_txs7d")]
+position = Vector2(253, 497)
+detector_id = "6"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-4, 3)
-shape = SubResource("RectangleShape2D_rgxwr")
+[node name="Area2D2" parent="." instance=ExtResource("2_txs7d")]
+position = Vector2(597, 495)
+detector_id = "7"
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2(1387, 468)
+[node name="Area2D3" parent="." instance=ExtResource("2_txs7d")]
+position = Vector2(938, 478)
+detector_id = "8"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(-4, 3)
-shape = SubResource("RectangleShape2D_rgxwr")
+[node name="Area2D4" parent="." instance=ExtResource("2_txs7d")]
+position = Vector2(1324, 474)
+detector_id = "9"
 
-[node name="Area2D3" type="Area2D" parent="."]
-position = Vector2(1723, 144)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(-4, 3)
-shape = SubResource("RectangleShape2D_rgxwr")
-
-[node name="Area2D4" type="Area2D" parent="."]
-position = Vector2(503, 458)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2(-4, 3)
-shape = SubResource("RectangleShape2D_rgxwr")
-
-[node name="Area2D5" type="Area2D" parent="."]
-position = Vector2(212, 153)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
-position = Vector2(-4, 3)
-shape = SubResource("RectangleShape2D_rgxwr")
+[node name="Area2D5" parent="." instance=ExtResource("2_txs7d")]
+position = Vector2(1711, 478)
+detector_id = "10"
