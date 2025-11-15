@@ -3,8 +3,7 @@ extends Node2D
 @onready var children = get_children()
 var detectors:= []
 var items:= []
-var is_snapped = []
-var number_of_correct = 0
+var is_snapped := [false, false, false,false,false]
 
 func snap():
 	for detector_index in range(detectors.size()):
@@ -14,15 +13,9 @@ func snap():
 				if !is_snapped[detector_index]:
 					items[item_index].position = detectors[detector_index].position
 					is_snapped[detector_index] = true
-				else:
-					is_snapped[detector_index] = false
+			else:
+				is_snapped[detector_index] = false
 					
-
-func _on_correct_placement():
-	number_of_correct+=1
-func _on_left():
-	number_of_correct-=1
-	
 
 func _ready() -> void:
 	for child in children:
@@ -30,17 +23,7 @@ func _ready() -> void:
 			detectors.append(child)
 		if is_instance_of(child, RigidBody2D):
 			items.append(child)
-	for i in range(len(detectors)):
+	for detector in detectors:
 		is_snapped.append(false)
-	print(is_snapped)
-	
 func _process(_delta: float) -> void:
 	snap()
-	for detector in detectors:
-		detector.connect("correct_placement", Callable(self, "_on_correct_placement"))
-		print(number_of_correct)
-		detector.connect("left", Callable(self,"_on_left"))
-		
-	if number_of_correct == 5:
-		await get_tree().create_timer(1).timeout
-		get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
