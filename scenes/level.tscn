@@ -17,4 +17,4 @@ offset_right = 960.0
 offset_bottom = 670.0
 
 [node name="Title" parent="." instance=ExtResource("3_ppgk2")]
-position = Vector2(410, 185)
+position = Vector2(410, 155)
