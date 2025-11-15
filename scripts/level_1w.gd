@@ -17,5 +17,6 @@ func quit_clicked() -> void:
 	
 func _ready() -> void:
 	play.connect("pressed", Callable(self, "play_clicked"))
+	play.disabled = true
 	settings.connect("pressed", Callable(self, "settings_clicked"))
 	quit.connect("pressed", Callable(self, "quit_clicked"))
