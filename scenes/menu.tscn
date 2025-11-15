@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://36po3lou07ye"]
+[gd_scene load_steps=7 format=3 uid="uid://36po3lou07ye"]
 
-[ext_resource type="Texture2D" uid="uid://bgkjv6b5n7o7p" path="res://assets/play.png" id="1_con2f"]
-[ext_resource type="Texture2D" uid="uid://o1i6inran1m1" path="res://assets/quit.png" id="2_mhnvy"]
-[ext_resource type="Texture2D" uid="uid://dvk8g345silau" path="res://assets/settings.png" id="3_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://bgkjv6b5n7o7p" path="res://assets/buttons/play.png" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://o1i6inran1m1" path="res://assets/buttons/quit.png" id="2_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://dvk8g345silau" path="res://assets/buttons/settings.png" id="3_4ytvr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_con2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ytvr"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -25,6 +31,7 @@ offset_right = 125.0
 offset_bottom = 145.56137
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_con2f")
 icon = ExtResource("1_con2f")
 flat = true
 expand_icon = true
@@ -42,6 +49,7 @@ offset_right = 410.0
 offset_bottom = 128.01831
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 icon = ExtResource("2_mhnvy")
 flat = true
 expand_icon = true
@@ -59,6 +67,7 @@ offset_right = -190.0
 offset_bottom = 125.509155
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4ytvr")
 icon = ExtResource("3_4ytvr")
 flat = true
 expand_icon = true

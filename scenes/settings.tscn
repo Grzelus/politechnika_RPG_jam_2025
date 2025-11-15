@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://nxkd6bo21jre"]
+[gd_scene load_steps=6 format=3 uid="uid://nxkd6bo21jre"]
 
 [ext_resource type="PackedScene" uid="uid://41n0gpbbbtde" path="res://scenes/background.tscn" id="1_5p8wc"]
 [ext_resource type="Script" uid="uid://dynr6s0yjoq2t" path="res://scripts/settings.gd" id="1_6wm04"]
 [ext_resource type="FontFile" uid="uid://2d5xopy54fx8" path="res://assets/atop.ttf" id="2_r6d6q"]
+[ext_resource type="Texture2D" uid="uid://dbr2jvj1wdw4y" path="res://assets/buttons/back.png" id="4_f4mfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f4mfi"]
 
 [node name="Settings" type="Node2D"]
 script = ExtResource("1_6wm04")
@@ -15,14 +18,18 @@ offset_top = 459.5
 offset_right = 1261.5
 offset_bottom = 620.5
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.78039217, 0.8156863, 0.96862745, 1)
 theme_override_fonts/font = ExtResource("2_r6d6q")
 theme_override_font_sizes/font_size = 128
 text = "SETTINGS"
 uppercase = true
 
 [node name="Back" type="Button" parent="."]
-offset_left = 1734.0
-offset_top = 934.0
-offset_right = 1864.0
-offset_bottom = 1026.0
-text = "BACK"
+offset_left = 34.0
+offset_top = 28.0
+offset_right = 234.0
+offset_bottom = 256.19846
+theme_override_styles/focus = SubResource("StyleBoxEmpty_f4mfi")
+icon = ExtResource("4_f4mfi")
+flat = true
+expand_icon = true

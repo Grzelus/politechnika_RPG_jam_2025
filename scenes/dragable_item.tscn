@@ -1,21 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://t3mxpp7c4lmw"]
+[gd_scene load_steps=3 format=3 uid="uid://b488s4oa6vq3p"]
 
-[ext_resource type="Texture2D" uid="uid://c1v4ea1khdo44" path="res://assets/tophat.png" id="1_d7q2t"]
-[ext_resource type="Script" uid="uid://dknt7pbtggckp" path="res://scripts/dragable_item.gd" id="2_mx1de"]
+[ext_resource type="Script" path="res://scripts/dragable_item.gd" id="2_mx1de"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d7q2t"]
 size = Vector2(292, 347)
 
 [node name="Dragable Item" type="RigidBody2D"]
+collision_layer = 2
 gravity_scale = 0.0
 script = ExtResource("2_mx1de")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -6.5)
 shape = SubResource("RectangleShape2D_d7q2t")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_d7q2t")
 
 [node name="Area2D" type="Area2D" parent="."]
 
