@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ywynnhxctyah"]
+
+[ext_resource type="Script" uid="uid://c5kyf341mxqe5" path="res://scripts/level_1w.gd" id="1_auq81"]
+[ext_resource type="PackedScene" uid="uid://41n0gpbbbtde" path="res://scenes/background.tscn" id="2_jtd6y"]
+[ext_resource type="PackedScene" uid="uid://36po3lou07ye" path="res://scenes/menu.tscn" id="3_18veh"]
+[ext_resource type="PackedScene" uid="uid://b0amdlomxy0x7" path="res://scenes/title_sprite.tscn" id="4_jsc31"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_auq81")
+
+[node name="Background" parent="." instance=ExtResource("2_jtd6y")]
+
+[node name="Menu" parent="." instance=ExtResource("3_18veh")]
+offset_left = 960.0
+offset_top = 670.0
+offset_right = 960.0
+offset_bottom = 670.0
+
+[node name="Title" parent="." instance=ExtResource("4_jsc31")]
+position = Vector2(410, 155)
