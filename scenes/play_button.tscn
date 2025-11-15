@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bla70u2e5q3hk"]
-
-[ext_resource type="Texture2D" uid="uid://bgkjv6b5n7o7p" path="res://assets/play.png" id="1_benoo"]
-
-[node name="Play" type="Button"]
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("1_benoo")
-flat = true
