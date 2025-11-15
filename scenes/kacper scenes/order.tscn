@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://1ay04rv1m6u5"]
+[gd_scene load_steps=5 format=3 uid="uid://1ay04rv1m6u5"]
 
-[ext_resource type="PackedScene" path="res://scenes/dragable_item.tscn" id="1_5odqg"]
+[ext_resource type="PackedScene" uid="uid://b488s4oa6vq3p" path="res://scenes/dragable_item.tscn" id="1_5odqg"]
 [ext_resource type="Script" uid="uid://ds0bc44r2dneg" path="res://scripts/snapping_layer.gd" id="1_rgxwr"]
+[ext_resource type="Texture2D" uid="uid://b3tscr25alg06" path="res://assets/card9.png" id="3_52b3f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rgxwr"]
 size = Vector2(361, 256)
@@ -10,13 +11,22 @@ size = Vector2(361, 256)
 script = ExtResource("1_rgxwr")
 
 [node name="Dragable Item" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(188, 901)
+position = Vector2(215, 916)
+
+[node name="Sprite2D" type="Sprite2D" parent="Dragable Item"]
+position = Vector2(-3.9999971, -11.999975)
+scale = Vector2(0.396, 0.34761906)
+texture = ExtResource("3_52b3f")
 
 [node name="Dragable Item2" parent="." instance=ExtResource("1_5odqg")]
 position = Vector2(632, 901)
 
+[node name="Sprite2D" type="Sprite2D" parent="Dragable Item2"]
+
 [node name="Dragable Item3" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(1044, 897)
+position = Vector2(1044, 872)
+
+[node name="Sprite2D" type="Sprite2D" parent="Dragable Item3"]
 
 [node name="Dragable Item4" parent="." instance=ExtResource("1_5odqg")]
 position = Vector2(1456, 901)
