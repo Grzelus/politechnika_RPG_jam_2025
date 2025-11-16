@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ywynnhxctyah"]
+[gd_scene load_steps=8 format=3 uid="uid://ywynnhxctyah"]
 
 [ext_resource type="Script" uid="uid://c5kyf341mxqe5" path="res://scripts/level_1w.gd" id="1_auq81"]
 [ext_resource type="PackedScene" uid="uid://41n0gpbbbtde" path="res://scenes/background.tscn" id="2_jtd6y"]
 [ext_resource type="PackedScene" uid="uid://36po3lou07ye" path="res://scenes/menu.tscn" id="3_18veh"]
 [ext_resource type="PackedScene" uid="uid://b0amdlomxy0x7" path="res://scenes/title_sprite.tscn" id="4_jsc31"]
+[ext_resource type="FontFile" uid="uid://2d5xopy54fx8" path="res://assets/atop.ttf" id="5_1m6c0"]
+[ext_resource type="Texture2D" uid="uid://dix3eqosurb0t" path="res://assets/click_here.png" id="6_80wh7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jwnjc"]
+radius = 52.009613
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_auq81")
@@ -18,3 +23,25 @@ offset_bottom = 670.0
 
 [node name="Title" parent="." instance=ExtResource("4_jsc31")]
 position = Vector2(410, 155)
+
+[node name="Score" type="Label" parent="."]
+offset_left = 71.0
+offset_top = 36.0
+offset_right = 269.0
+offset_bottom = 142.0
+theme_override_fonts/font = ExtResource("5_1m6c0")
+theme_override_font_sizes/font_size = 84
+text = "0/20"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(60, 830)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(80, 118)
+shape = SubResource("CircleShape2D_jwnjc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(100, 100)
+texture = ExtResource("6_80wh7")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
