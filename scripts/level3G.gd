@@ -25,16 +25,24 @@ func _ready() -> void:
 
 var enemy_counter := 1
 func _on_timer_timeout() -> void:
-	print("timeout")
-	if enemy_counter < 4:
+	if enemy_counter < 15:
 		enemy_counter += 1
 		var curr_enemy = enemy_preload.instantiate()
 		curr_enemy.position = $Path2D/PathFollow2D/Marker2D.position
+		curr_enemy.connect("touched_mouse", _on_evil_ball_touched_mouse)
 		add_child(curr_enemy)
 	else:
 		$Path2D/Timer.queue_free()
 
 
 func _on_evil_ball_touched_mouse(enemy: CharacterBody2D) -> void:
-	print(enemy.name)
-	enemy.position = $Path2D/PathFollow2D/Marker2D.position
+	enemy.global_position = $Path2D/PathFollow2D/Marker2D.global_position
+	if($survival_timer.time_left > 0):
+		$survival_timer.start($survival_timer.time_left + 1.0)
+
+
+func _on_survival_timer_timeout() -> void:
+	play.disabled = false
+	for child in get_children():
+		if child is CharacterBody2D:
+			child.queue_free()
