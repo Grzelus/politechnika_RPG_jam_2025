@@ -40,6 +40,6 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	snap()
 		
-	if number_of_correct == 5:
+	if number_of_correct == len(detectors):
 		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
