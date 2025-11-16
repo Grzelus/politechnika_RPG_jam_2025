@@ -18,6 +18,7 @@ func quit_clicked() -> void:
 	get_tree().quit()
 	
 func _ready() -> void:
+<<<<<<< HEAD:scripts/level_1w.gd
 	play.connect("pressed", Callable(self, "play_clicked"))
 	play.disabled = true
 	settings.connect("pressed", Callable(self, "settings_clicked"))
@@ -31,3 +32,6 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 	if score >= 20:
 		$Score.text = "20/20"
 		play.disabled = false
+=======
+	pass
+>>>>>>> 425921c249db080c965a94e00a3eb92bad13c11f:scripts/level_1k.gd

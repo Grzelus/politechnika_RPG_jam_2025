@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b488s4oa6vq3p"]
+
+[ext_resource type="Script" uid="uid://dknt7pbtggckp" path="res://scripts/dragable_item.gd" id="2_mx1de"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7q2t"]
+size = Vector2(156.25, 218.75)
+
+[node name="Dragable Item" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("2_mx1de")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d7q2t")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_d7q2t")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
