@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://casu5r5ec3k8e"]
+
+[ext_resource type="Script" uid="uid://ba34kh80xs8gu" path="res://scripts/level_1k.gd" id="1_gunq7"]
+[ext_resource type="PackedScene" uid="uid://41n0gpbbbtde" path="res://scenes/background.tscn" id="2_15102"]
+[ext_resource type="PackedScene" uid="uid://b0amdlomxy0x7" path="res://scenes/title_sprite.tscn" id="3_0vomu"]
+[ext_resource type="PackedScene" uid="uid://clplcq1m1l8c" path="res://scenes/kacper scenes/order2.tscn" id="4_gunq7"]
+
+[node name="Level_2k" type="Node2D"]
+script = ExtResource("1_gunq7")
+
+[node name="Background" parent="." instance=ExtResource("2_15102")]
+
+[node name="Title" parent="." instance=ExtResource("3_0vomu")]
+position = Vector2(410, 185)
+
+[node name="Order2" parent="." instance=ExtResource("4_gunq7")]
+position = Vector2(-2, 7)

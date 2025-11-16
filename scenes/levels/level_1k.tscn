@@ -14,3 +14,4 @@ script = ExtResource("1_lapuo")
 position = Vector2(410, 185)
 
 [node name="order" parent="." instance=ExtResource("4_vf72j")]
+z_index = 1

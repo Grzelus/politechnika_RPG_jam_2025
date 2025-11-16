@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://clplcq1m1l8c"]
+
+[ext_resource type="Script" uid="uid://ds0bc44r2dneg" path="res://scripts/snapping_layer.gd" id="1_45w65"]
+[ext_resource type="PackedScene" uid="uid://dvfnwui8te5vo" path="res://scenes/kacper scenes/snap_anchor.tscn" id="1_ihmrw"]
+[ext_resource type="PackedScene" uid="uid://b488s4oa6vq3p" path="res://scenes/dragable_item.tscn" id="2_45w65"]
+[ext_resource type="Texture2D" uid="uid://dufrknj0fivoj" path="res://assets/card7.png" id="3_u30vb"]
+
+[node name="Order2" type="Node2D"]
+script = ExtResource("1_45w65")
+
+[node name="Area2D" parent="." instance=ExtResource("1_ihmrw")]
+position = Vector2(176, 507)
+detector_id = "1"
+
+[node name="Area2D2" parent="." instance=ExtResource("1_ihmrw")]
+position = Vector2(418, 501)
+detector_id = "2"
+
+[node name="Area2D3" parent="." instance=ExtResource("1_ihmrw")]
+position = Vector2(712, 505)
+detector_id = "3"
+
+[node name="Area2D4" parent="." instance=ExtResource("1_ihmrw")]
+position = Vector2(1004, 507)
+detector_id = "4"
+
+[node name="Area2D5" parent="." instance=ExtResource("1_ihmrw")]
+position = Vector2(1264, 511)
+detector_id = "5"
+
+[node name="Area2D6" parent="." instance=ExtResource("1_ihmrw")]
+position = Vector2(1548, 507)
+detector_id = "6"
+
+[node name="Area2D7" parent="." instance=ExtResource("1_ihmrw")]
+position = Vector2(1778, 509)
+detector_id = "7"
+
+[node name="Dragable Item" parent="." instance=ExtResource("2_45w65")]
+position = Vector2(644, 891)
+texture = ExtResource("3_u30vb")
+reverse_color = Color(0.9342588, 0.15135908, 0.09065316, 1)
+card_id = "1"
+
+[node name="Dragable Item2" parent="." instance=ExtResource("2_45w65")]
+position = Vector2(1160, 881)
+texture = ExtResource("3_u30vb")
+reverse_color = Color(0.93333334, 0.39607844, 0.09019608, 1)
+card_id = "2"
+
+[node name="Dragable Item3" parent="." instance=ExtResource("2_45w65")]
+position = Vector2(190, 885)
+texture = ExtResource("3_u30vb")
+reverse_color = Color(0.93333334, 0.8235294, 0.09019608, 1)
+card_id = "3"
+
+[node name="Dragable Item4" parent="." instance=ExtResource("2_45w65")]
+position = Vector2(908, 891)
+texture = ExtResource("3_u30vb")
+reverse_color = Color(0.31946462, 0.7035572, 7.70092e-07, 1)
+card_id = "4"
+
+[node name="Dragable Item5" parent="." instance=ExtResource("2_45w65")]
+position = Vector2(1454, 867)
+texture = ExtResource("3_u30vb")
+reverse_color = Color(2.0214916e-06, 0.6758403, 0.72938454, 1)
+card_id = "5"
+
+[node name="Dragable Item6" parent="." instance=ExtResource("2_45w65")]
+position = Vector2(1754, 869)
+texture = ExtResource("3_u30vb")
+reverse_color = Color(0.5535591, 0.52676535, 0.97884876, 1)
+card_id = "6"
+
+[node name="Dragable Item7" parent="." instance=ExtResource("2_45w65")]
+position = Vector2(390, 901)
+texture = ExtResource("3_u30vb")
+reverse_color = Color(0.82387817, 0.35287437, 0.945538, 1)
+card_id = "7"

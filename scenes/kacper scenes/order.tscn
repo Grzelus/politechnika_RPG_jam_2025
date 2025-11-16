@@ -13,46 +13,46 @@
 script = ExtResource("1_rgxwr")
 
 [node name="Dragable Item" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(233, 841)
+position = Vector2(1389, 800)
 texture = ExtResource("4_txs7d")
 card_id = "6"
 
 [node name="Dragable Item2" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(552, 849)
+position = Vector2(1040, 807)
 texture = ExtResource("3_52b3f")
 card_id = "7"
 
 [node name="Dragable Item3" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(937, 808)
+position = Vector2(655, 809)
 texture = ExtResource("6_34t3u")
 card_id = "8"
 
 [node name="Dragable Item4" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(1307, 808)
+position = Vector2(302, 813)
 texture = ExtResource("5_qlc6l")
 card_id = "9"
 
 [node name="Dragable Item5" parent="." instance=ExtResource("1_5odqg")]
-position = Vector2(1670, 813)
+position = Vector2(1685, 825)
 texture = ExtResource("7_qrcr7")
 card_id = "10"
 
 [node name="Area2D" parent="." instance=ExtResource("2_txs7d")]
-position = Vector2(253, 497)
+position = Vector2(320, 477)
 detector_id = "6"
 
 [node name="Area2D2" parent="." instance=ExtResource("2_txs7d")]
-position = Vector2(597, 495)
+position = Vector2(633, 480)
 detector_id = "7"
 
 [node name="Area2D3" parent="." instance=ExtResource("2_txs7d")]
-position = Vector2(938, 478)
+position = Vector2(994, 480)
 detector_id = "8"
 
 [node name="Area2D4" parent="." instance=ExtResource("2_txs7d")]
-position = Vector2(1324, 474)
+position = Vector2(1328, 484)
 detector_id = "9"
 
 [node name="Area2D5" parent="." instance=ExtResource("2_txs7d")]
-position = Vector2(1711, 478)
+position = Vector2(1607, 485)
 detector_id = "10"
