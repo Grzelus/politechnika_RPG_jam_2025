@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://chaa2l8icxv6m"]
+
+[ext_resource type="FontFile" uid="uid://2d5xopy54fx8" path="res://assets/atop.ttf" id="1_kg060"]
+[ext_resource type="Script" uid="uid://3lmakaw1ef0" path="res://scripts/letter.gd" id="2_s3w0n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s3w0n"]
+radius = 44.0
+height = 96.0
+
+[node name="Letter" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_kg060")
+theme_override_font_sizes/font_size = 128
+text = "A"
+script = ExtResource("2_s3w0n")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(44, 80)
+shape = SubResource("CapsuleShape2D_s3w0n")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

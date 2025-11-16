@@ -6,13 +6,8 @@ extends Node2D
 
 var score: int = 0
 
-
 func play_clicked() -> void:
-<<<<<<<< HEAD:scripts/level1G.gd
-	get_tree().change_scene_to_file("res://scenes/gabriel_scenes/levelG2.tscn")
-========
-	get_tree().change_scene_to_file("res://scenes/levels/werka/level_2w.tscn")
->>>>>>>> main:scripts/level_1w.gd
+	get_tree().change_scene_to_file("res://scenes/levels/werka/level_3w.tscn")
 	
 func settings_clicked() -> void:
 	var settings_scene = preload("res://scenes/settings.tscn").instantiate()
@@ -22,29 +17,22 @@ func quit_clicked() -> void:
 	get_tree().quit()
 	
 func _ready() -> void:
-<<<<<<<< HEAD:scripts/level1G.gd
-	play.disabled = true
-========
-<<<<<<< HEAD:scripts/level_1w.gd
->>>>>>>> main:scripts/level_1w.gd
+	$Menu.visible = false
 	play.connect("pressed", Callable(self, "play_clicked"))
 	play.disabled = true
 	settings.connect("pressed", Callable(self, "settings_clicked"))
 	quit.connect("pressed", Callable(self, "quit_clicked"))
 
-<<<<<<<< HEAD:scripts/level1G.gd
-func _on_ball_goal_reached() -> void:
-	play.disabled = false # Replace with function body.
-========
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event.is_action_pressed("left_click"):
 		score += 1
 		$Score.text = str(score) + "/20"
+		$Area2D.position.x = randi_range(60, 1660)
+		$Area2D.position.y = randi_range(150, 830)
 	if score >= 20:
+		$Menu.visible = true
+		$Area2D.position.x = 60
+		$Area2D.position.y = 830
 		$Score.text = "20/20"
 		play.disabled = false
-=======
-	pass
->>>>>>> 425921c249db080c965a94e00a3eb92bad13c11f:scripts/level_1k.gd
->>>>>>>> main:scripts/level_1w.gd

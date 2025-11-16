@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1v4ea1khdo44"
-path="res://.godot/imported/tophat.png-7a210baa21bcfb44352bb495d8211183.ctex"
+uid="uid://dix3eqosurb0t"
+path="res://.godot/imported/click_here.png-3670c94b4ba5b007530acc4b4547f1a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tophat.png"
-dest_files=["res://.godot/imported/tophat.png-7a210baa21bcfb44352bb495d8211183.ctex"]
+source_file="res://assets/click_here.png"
+dest_files=["res://.godot/imported/click_here.png-3670c94b4ba5b007530acc4b4547f1a5.ctex"]
 
 [params]
 
