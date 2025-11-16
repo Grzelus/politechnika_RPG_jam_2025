@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://b488s4oa6vq3p"]
+[gd_scene load_steps=7 format=3 uid="uid://b488s4oa6vq3p"]
 
-[ext_resource type="Texture2D" uid="uid://dufrknj0fivoj" path="res://assets/card7.png" id="2_2j8jb"]
 [ext_resource type="Script" uid="uid://dknt7pbtggckp" path="res://scripts/dragable_item.gd" id="2_mx1de"]
 
 [sub_resource type="Animation" id="Animation_jaydb"]
@@ -65,7 +64,6 @@ gravity_scale = 0.0
 script = ExtResource("2_mx1de")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_2j8jb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 libraries = {
