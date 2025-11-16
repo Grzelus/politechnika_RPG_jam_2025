@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4b42jh8iupve"]
+
+[ext_resource type="Script" uid="uid://drs1m73xn8j3i" path="res://scripts/level_3w.gd" id="1_1r82o"]
+[ext_resource type="PackedScene" uid="uid://41n0gpbbbtde" path="res://scenes/background.tscn" id="2_w2nna"]
+[ext_resource type="PackedScene" uid="uid://36po3lou07ye" path="res://scenes/menu.tscn" id="3_prafu"]
+[ext_resource type="PackedScene" uid="uid://b0amdlomxy0x7" path="res://scenes/title_sprite.tscn" id="4_c5d5q"]
+[ext_resource type="PackedScene" uid="uid://chaa2l8icxv6m" path="res://scenes/letter.tscn" id="4_ix0em"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_1r82o")
+metadata/_edit_vertical_guides_ = [959.0]
+
+[node name="Background" parent="." instance=ExtResource("2_w2nna")]
+
+[node name="Menu" parent="." instance=ExtResource("3_prafu")]
+offset_left = 960.0
+offset_top = 670.0
+offset_right = 960.0
+offset_bottom = 670.0
+
+[node name="TitleSprite" parent="." instance=ExtResource("4_c5d5q")]
+position = Vector2(410, 155)
+
+[node name="Title" type="Node" parent="."]
+
+[node name="Letter1" parent="Title" instance=ExtResource("4_ix0em")]
+offset_left = 406.0
+offset_top = 170.0
+offset_right = 497.0
+offset_bottom = 331.0
+
+[node name="Letter2" parent="Title" instance=ExtResource("4_ix0em")]
+offset_left = 506.0
+offset_top = 170.0
+offset_right = 597.0
+offset_bottom = 331.0
+
+[node name="Letter3" parent="Title" instance=ExtResource("4_ix0em")]
+offset_left = 606.0
+offset_top = 170.0
+offset_right = 697.0
+offset_bottom = 331.0
+
+[node name="Letter4" parent="Title" instance=ExtResource("4_ix0em")]
+offset_left = 706.0
+offset_top = 170.0
+offset_right = 797.0
+offset_bottom = 331.0
+
+[node name="Letter5" parent="Title" instance=ExtResource("4_ix0em")]
+offset_left = 806.0
+offset_top = 170.0
+offset_right = 897.0
+offset_bottom = 331.0
+
+[node name="Screen" type="Node" parent="."]
+
+[node name="Letter1" parent="Screen" instance=ExtResource("4_ix0em")]
+offset_left = 903.0
+offset_top = 232.0
+offset_right = 994.0
+offset_bottom = 393.0
+
+[node name="Letter2" parent="Screen" instance=ExtResource("4_ix0em")]
+offset_left = 1003.0
+offset_top = 232.0
+offset_right = 1094.0
+offset_bottom = 393.0
+
+[node name="Letter3" parent="Screen" instance=ExtResource("4_ix0em")]
+offset_left = 1103.0
+offset_top = 232.0
+offset_right = 1194.0
+offset_bottom = 393.0
+
+[node name="Letter4" parent="Screen" instance=ExtResource("4_ix0em")]
+offset_left = 1203.0
+offset_top = 232.0
+offset_right = 1294.0
+offset_bottom = 393.0
+
+[node name="Letter5" parent="Screen" instance=ExtResource("4_ix0em")]
+offset_left = 1303.0
+offset_top = 232.0
+offset_right = 1394.0
+offset_bottom = 393.0
+
+[node name="Letter6" parent="Screen" instance=ExtResource("4_ix0em")]
+offset_left = 1403.0
+offset_top = 232.0
+offset_right = 1494.0
+offset_bottom = 393.0

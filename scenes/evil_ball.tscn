@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dv1sangnn06wt"]
+
+[ext_resource type="Script" uid="uid://ddqsvp1esrrju" path="res://scripts/following_mouse_evil.gd" id="1_6iqhh"]
+[ext_resource type="Texture2D" uid="uid://bucari8b0eglp" path="res://assets/magic_ball.png" id="2_f4p8s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6bxkw"]
+radius = 51.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lo4qq"]
+radius = 44.28318
+
+[node name="Node2D" type="CharacterBody2D"]
+script = ExtResource("1_6iqhh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_6bxkw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.3137255, 0.23137255, 1)
+rotation = 0.7766715
+texture = ExtResource("2_f4p8s")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_lo4qq")
+
+[connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

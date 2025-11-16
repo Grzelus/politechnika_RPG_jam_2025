@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://bd0jpw4s1malq"]
+
+[ext_resource type="Texture2D" uid="uid://c1v4ea1khdo44" path="res://assets/tophat.png" id="1_21q5t"]
+[ext_resource type="Script" uid="uid://bsxwygfb3oiku" path="res://scenes/tophat.gd" id="1_h8ene"]
+[ext_resource type="Texture2D" uid="uid://gfi7frl7ec3a" path="res://assets/bunny_spritesheet.png" id="3_kwios"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f26ok"]
+atlas = ExtResource("3_kwios")
+region = Rect2(1280, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdrq6"]
+atlas = ExtResource("3_kwios")
+region = Rect2(1024, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqxjv"]
+atlas = ExtResource("3_kwios")
+region = Rect2(768, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03stu"]
+atlas = ExtResource("3_kwios")
+region = Rect2(256, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21tep"]
+atlas = ExtResource("3_kwios")
+region = Rect2(0, 0, 256, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we0d4"]
+atlas = ExtResource("3_kwios")
+region = Rect2(512, 0, 256, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_01c5v"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f26ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdrq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqxjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03stu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21tep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03stu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we0d4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqxjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we0d4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we0d4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cdrq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f26ok")
+}],
+"loop": false,
+"name": &"rabbit",
+"speed": 11.0
+}]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_h8ene")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+texture = ExtResource("1_21q5t")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+z_index = 5
+position = Vector2(176.43565, -413.61853)
+scale = Vector2(3.2444851, 7.866379)
+polygon = PackedVector2Array(-40.8187, 51.69069, -39.277622, 54.614525, -34.96261, 58.555347, -26.024363, 58.936714, -14.620396, 60.207947, -8.764305, 64.021645, -12.462891, 67.19973, -34.037964, 71.52193, -56.53768, 73.30165, -83.66063, 73.81014, -97.53032, 72.53891, -100.920685, 69.996445, -97.83853, 66.43699, -88.28386, 63.640278, -78.72919, 61.606304, -80.578476, 56.01288, -86.43457, 47.62274, -94.13995, 41.520824, -99.37961, 37.707127, -95.37281, 35.291782, -88.28386, 35.164658, -73.489525, 34.02055, -65.16771, 31.986578, -55.304817, 30.206852, -44.825497, 29.952604, -39.277622, 30.461098, -38.66119, 31.986578, -39.277622, 35.418907, -41.435127, 38.97836, -41.743343, 42.664932, -41.743343, 47.24137, -41.126915, 49.656715)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(24.000002, 210.00002)
+rotation = -0.19533013
+sprite_frames = SubResource("SpriteFrames_01c5v")
+animation = &"rabbit"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="tophat_clicked" from="." to="." method="_on_tophat_clicked"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
