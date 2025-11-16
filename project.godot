@@ -11,8 +11,7 @@ config_version=5
 [application]
 
 config/name="Title Screen"
-run/main_scene="uid://bt21o1g568pmh"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://clplcq1m1l8c"
 
 [display]
 
