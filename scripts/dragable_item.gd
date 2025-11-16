@@ -6,15 +6,29 @@ extends RigidBody2D
 @onready var sprite := get_node_or_null("Sprite2D")
 var reverse = preload("res://assets/card_bg.png")
 @onready var collision_shape = get_node_or_null("CollisionShape2D").shape
+@onready var animation_player = get_node_or_null("Sprite2D/AnimationPlayer")
 
 var dragging = false
 var of = Vector2(0.0, 0.0)
 
 func toggle_sprite():
 	if sprite.texture == texture:
+		animation_player.play("flip_1")
+		await animation_player.animation_finished
+		sprite.z_index = -100
 		sprite.texture = reverse
+		sprite.z_index = 0
+		animation_player.play("flip_2")
+		await animation_player.animation_finished
 	else:
+		animation_player.play("flip_1")
+		await animation_player.animation_finished
+		sprite.z_index = -100
 		sprite.texture = texture
+		sprite.z_index = 0
+		animation_player.play("flip_2")
+		await animation_player.animation_finished
+
 
 func _process(_delta: float) -> void:
 	if dragging:
@@ -31,6 +45,9 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		if event.is_action_pressed("right_click"):
 			toggle_sprite()
 func _ready() -> void:
+	resize()
+	
+func resize():
 	if texture:
 		var texture_size = texture.get_size()
 		sprite.texture = texture
