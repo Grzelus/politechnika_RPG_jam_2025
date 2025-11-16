@@ -33,13 +33,12 @@ func _ready() -> void:
 	for i in range(len(detectors)):
 		is_snapped.append(false)
 	print(is_snapped)
+	for detector in detectors:
+		detector.connect("correct_placement", Callable(self, "_on_correct_placement"))
+		detector.connect("left", Callable(self,"_on_left"))
 	
 func _process(_delta: float) -> void:
 	snap()
-	for detector in detectors:
-		detector.connect("correct_placement", Callable(self, "_on_correct_placement"))
-		print(number_of_correct)
-		detector.connect("left", Callable(self,"_on_left"))
 		
 	if number_of_correct == 5:
 		await get_tree().create_timer(1).timeout
